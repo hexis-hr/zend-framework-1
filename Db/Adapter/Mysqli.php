@@ -371,7 +371,9 @@ class Zend_Db_Adapter_Mysqli extends Zend_Db_Adapter_Abstract
     {
         $this->_connect();
         if ($this->_stmt) {
-            $this->_stmt->close();
+            // for some reason this does not work
+            //$this->_stmt->close();
+            $this->_stmt = null;
         }
         $stmtClass = $this->_defaultStmtClass;
         if (!class_exists($stmtClass)) {
