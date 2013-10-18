@@ -16,9 +16,9 @@
  * @category   Zend
  * @package    Zend_Service
  * @subpackage Yahoo
- * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: Yahoo.php 23775 2011-03-01 17:25:24Z ralph $
+ * @version    $Id: Yahoo.php 24593 2012-01-05 20:35:02Z matthew $
  */
 
 
@@ -26,7 +26,7 @@
  * @category   Zend
  * @package    Zend_Service
  * @subpackage Yahoo
- * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 class Zend_Service_Yahoo
@@ -69,7 +69,7 @@ class Zend_Service_Yahoo
      * specified consist of:
      * 'results'      => int  How many results to return, max is 100
      * 'start'        => int  The start offset for search results
-     * 'entire_site'  => bool  Data for the whole booking or a single page
+     * 'entire_site'  => bool  Data for the whole site or a single page
      * 'omit_inlinks' => (none|domain|subdomain)  Filter inlinks from these sources
      *
      * @param  string $query    the query being run
@@ -242,7 +242,7 @@ class Zend_Service_Yahoo
      * 'sort'       => (rank|date)  How to order your results
      * 'language'   => lang  The target document language to match
      * 'type'       => (all|any|phrase)  How the query should be parsed
-     * 'booking'       => string  A booking to which your search should be restricted
+     * 'site'       => string  A site to which your search should be restricted
      *
      * @param  string $query    The query to run
      * @param  array  $options  The array of optional parameters
@@ -394,7 +394,7 @@ class Zend_Service_Yahoo
      * 'start'      => int  The start offset for search results
      * 'language'   => lang  The target document language to match
      * 'type'       => (all|any|phrase)  How the query should be parsed
-     * 'booking'       => string  A booking to which your search should be restricted
+     * 'site'       => string  A site to which your search should be restricted
      * 'format'     => (any|html|msword|pdf|ppt|rss|txt|xls)
      * 'adult_ok'   => bool  permit 'adult' content in the search results
      * 'similar_ok' => bool  permit similar results in the result set
@@ -676,7 +676,7 @@ class Zend_Service_Yahoo
      */
     protected function _validateNewsSearch(array $options)
     {
-        $validOptions = array('appid', 'query', 'results', 'start', 'sort', 'language', 'type', 'booking');
+        $validOptions = array('appid', 'query', 'results', 'start', 'sort', 'language', 'type', 'site');
 
         $this->_compareOptions($options, $validOptions);
 
@@ -803,7 +803,7 @@ class Zend_Service_Yahoo
     protected function _validateWebSearch(array $options)
     {
         $validOptions = array('appid', 'query', 'results', 'start', 'language', 'type', 'format', 'adult_ok',
-                              'similar_ok', 'country', 'booking', 'subscription', 'license', 'region');
+                              'similar_ok', 'country', 'site', 'subscription', 'license', 'region');
 
         $this->_compareOptions($options, $validOptions);
 

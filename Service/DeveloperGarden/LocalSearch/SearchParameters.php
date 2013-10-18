@@ -15,16 +15,16 @@
  * @category   Zend
  * @package    Zend_Service
  * @subpackage DeveloperGarden
- * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: SearchParameters.php 23775 2011-03-01 17:25:24Z ralph $
+ * @version    $Id: SearchParameters.php 24593 2012-01-05 20:35:02Z matthew $
  */
 
 /**
  * @category   Zend
  * @package    Zend_Service
  * @subpackage DeveloperGarden
- * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
  * @author     Marco Kaiser
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
@@ -55,7 +55,7 @@ class Zend_Service_DeveloperGarden_LocalSearch_SearchParameters
         'filter'           => null, // can be ONLINER or OFFLINER
         'openingtime'      => null, // can be now or HH::MM
         'kategorie'        => null, // @see http://www.suchen.de/kategorie-katalog
-        'booking'             => null,
+        'site'             => null,
         'typ'              => null,
         'name'             => null,
         'page'             => null,
@@ -426,7 +426,7 @@ class Zend_Service_DeveloperGarden_LocalSearch_SearchParameters
     }
 
     /**
-     * sets the booking filter
+     * sets the site filter
      * ie: www.developergarden.com
      *
      * @param string $site
@@ -434,7 +434,7 @@ class Zend_Service_DeveloperGarden_LocalSearch_SearchParameters
      */
     public function setSite($site)
     {
-        $this->_parameters['booking'] = $site;
+        $this->_parameters['site'] = $site;
         return $this;
     }
 

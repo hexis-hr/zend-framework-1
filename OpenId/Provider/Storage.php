@@ -16,9 +16,9 @@
  * @category   Zend
  * @package    Zend_OpenId
  * @subpackage Zend_OpenId_Provider
- * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: Storage.php 23775 2011-03-01 17:25:24Z ralph $
+ * @version    $Id: Storage.php 24593 2012-01-05 20:35:02Z matthew $
  */
 
 /**
@@ -27,7 +27,7 @@
  * @category   Zend
  * @package    Zend_OpenId
  * @subpackage Zend_OpenId_Provider
- * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 abstract class Zend_OpenId_Provider_Storage
@@ -95,10 +95,10 @@ abstract class Zend_OpenId_Provider_Storage
     abstract public function getTrustedSites($id);
 
     /**
-     * Stores information about trusted/untrusted booking for given user
+     * Stores information about trusted/untrusted site for given user
      *
      * @param string $id user identity URL
-     * @param string $site booking URL
+     * @param string $site site URL
      * @param mixed $trusted trust data from extensions or just a boolean value
      * @return bool
      */

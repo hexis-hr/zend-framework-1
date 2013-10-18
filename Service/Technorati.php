@@ -16,9 +16,9 @@
  * @category   Zend
  * @package    Zend_Service
  * @subpackage Technorati
- * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: Technorati.php 23775 2011-03-01 17:25:24Z ralph $
+ * @version    $Id: Technorati.php 24593 2012-01-05 20:35:02Z matthew $
  */
 
 
@@ -32,7 +32,7 @@
  * @category   Zend
  * @package    Zend_Service
  * @subpackage Technorati
- * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 class Zend_Service_Technorati
@@ -95,10 +95,10 @@ class Zend_Service_Technorati
     /**
      * Cosmos query lets you see what blogs are linking to a given URL.
      *
-     * On the Technorati booking, you can enter a URL in the searchbox and
+     * On the Technorati site, you can enter a URL in the searchbox and
      * it will return a list of blogs linking to it.
      * The API version allows more features and gives you a way
-     * to use the cosmos on your own booking.
+     * to use the cosmos on your own site.
      *
      * Query options include:
      *

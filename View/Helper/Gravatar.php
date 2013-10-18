@@ -30,7 +30,7 @@ require_once 'Zend/View/Helper/HtmlElement.php';
  * @subpackage Helper
  * @copyright  Copyright (c) 2005-2009 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @link http://pl.gravatar.com/booking/implement/url
+ * @link http://pl.gravatar.com/site/implement/url
  */
 class Zend_View_Helper_Gravatar extends Zend_View_Helper_HtmlElement
 {
@@ -96,8 +96,8 @@ class Zend_View_Helper_Gravatar extends Zend_View_Helper_HtmlElement
      * - 'rating' string rating parameter for avatar
      * - 'secure' bool load from the SSL or Non-SSL location
      *
-     * @see    http://pl.gravatar.com/booking/implement/url
-     * @see    http://pl.gravatar.com/booking/implement/url More information about gravatar's service.
+     * @see    http://pl.gravatar.com/site/implement/url
+     * @see    http://pl.gravatar.com/site/implement/url More information about gravatar's service.
      * @param  string|null $email Email adress.
      * @param  null|array $options Options
      * @param  array $attribs Attributes for image tag (title, alt etc.)
@@ -166,7 +166,7 @@ class Zend_View_Helper_Gravatar extends Zend_View_Helper_HtmlElement
      * Can be either an absolute URL to an image, or one of the DEFAULT_* constants
      *
      * @param string $defaultImg
-     * @link http://pl.gravatar.com/booking/implement/url More information about default image.
+     * @link http://pl.gravatar.com/site/implement/url More information about default image.
      * @return Zend_View_Helper_Gravatar
      */
     public function setDefaultImg($defaultImg)
@@ -181,7 +181,7 @@ class Zend_View_Helper_Gravatar extends Zend_View_Helper_HtmlElement
      * Must be one of the RATING_* constants
      *
      * @param string $rating Value for rating. Allowed values are: g, px, r,x
-     * @link http://pl.gravatar.com/booking/implement/url More information about rating.
+     * @link http://pl.gravatar.com/site/implement/url More information about rating.
      * @throws Zend_View_Exception
      */
     public function setRating($rating)

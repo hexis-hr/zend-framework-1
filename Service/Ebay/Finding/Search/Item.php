@@ -15,7 +15,7 @@
  * @category   Zend
  * @package    Zend_Service
  * @subpackage Ebay
- * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http:framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id: Item.php 22824 2010-08-09 18:59:54Z renanbr $
  */
@@ -29,7 +29,7 @@ require_once 'Zend/Service/Ebay/Finding/Abstract.php';
  * @category   Zend
  * @package    Zend_Service
  * @subpackage Ebay
- * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http:framework.zend.com/license/new-bsd     New BSD License
  * @uses       Zend_Service_Ebay_Finding_Abstract
  */
@@ -71,10 +71,10 @@ class Zend_Service_Ebay_Finding_Search_Item extends Zend_Service_Ebay_Finding_Ab
      * The distance that the item is from the buyer, calculated usin
      *  buyerPostalCode.
      *
-     *  The unit for distance varies by booking, and is either miles or kilometers.
-     *  If the country whose booking you are searching uses kilometers to measure
+     *  The unit for distance varies by site, and is either miles or kilometers.
+     *  If the country whose site you are searching uses kilometers to measure
      *  distance (for example, India/EBAY-IN), the unit is kilometers. If the
-     *  booking is either the US or UK, the distance unit is miles.
+     *  site is either the US or UK, the distance unit is miles.
      *
      *  This value is only returned for distance-based searches. You must
      *  specify a buyerPostalCode and either sort by Distance, or use a
@@ -88,7 +88,7 @@ class Zend_Service_Ebay_Finding_Search_Item extends Zend_Service_Ebay_Finding_Ab
      * URL for the Gallery Plus image.
      *
      * The size of Gallery Plus images (up to 400 x 400 pixels) is bigger than
-     * the size of standard gallery images. In booking search results, you can view
+     * the size of standard gallery images. In site search results, you can view
      * the Gallery Plus image by hovering over or clicking the Enlarge link or
      * magifying glass icon. The image uses one of the following graphics
      * formats: JPEG, BMP, TIFF, or GIF. This field is only returned when the
@@ -110,11 +110,11 @@ class Zend_Service_Ebay_Finding_Search_Item extends Zend_Service_Ebay_Finding_Ab
     public $galleryURL;
 
     /**
-     * The identifier for the booking on which the item is listed.
+     * The identifier for the site on which the item is listed.
      *
      * Returns a Global ID, which is a unique identifier that specifies the
-     * combination of the booking, language, and territory. In other eBay APIs
-     * (such as the Shopping API), this value is know as the booking ID.
+     * combination of the site, language, and territory. In other eBay APIs
+     * (such as the Shopping API), this value is know as the site ID.
      *
      * @link http://developer.ebay.com/DevZone/finding/CallRef/Enums/GlobalIdList.html
      * @var  string
@@ -278,7 +278,7 @@ class Zend_Service_Ebay_Finding_Search_Item extends Zend_Service_Ebay_Finding_Ab
      *
      * Do not modify the returned URLs in your application queries (for example,
      * eBay won't recognize the URL if you change QQ to &). In the Sandbox
-     * environment (and on the Hong Kong booking), the data returned in this field
+     * environment (and on the Hong Kong site), the data returned in this field
      * is a standard ViewItem URL rather than the ViewItemURL for natural
      * search.
      *

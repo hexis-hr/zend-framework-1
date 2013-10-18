@@ -15,7 +15,7 @@
  * @category   Zend
  * @package    Zend_Service
  * @subpackage Ebay
- * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id: ListingInfo.php 22791 2010-08-04 16:11:47Z renanbr $
  */
@@ -29,7 +29,7 @@ require_once 'Zend/Service/Ebay/Finding/Abstract.php';
  * @category   Zend
  * @package    Zend_Service
  * @subpackage Ebay
- * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @uses       Zend_Service_Ebay_Finding_Abstract
  */
@@ -42,7 +42,7 @@ class Zend_Service_Ebay_Finding_ListingInfo extends Zend_Service_Ebay_Finding_Ab
      * Best Offer allows a buyer to make a lower-priced binding offer on a fixed
      * price item. Buyers cannot see how many offers have been made (only the
      * seller can see this information). To make a best offer on a listing, use
-     * the eBay Web booking.
+     * the eBay Web site.
      *
      * @var boolean
      */
@@ -62,7 +62,7 @@ class Zend_Service_Ebay_Finding_ListingInfo extends Zend_Service_Ebay_Finding_Ab
     public $buyItNowAvailable;
 
     /**
-     * The Buy It Now Price of the item (if any), in the currency of the booking on
+     * The Buy It Now Price of the item (if any), in the currency of the site on
      * which the item was listed.
      *
      * You can use this field to determine if the item was originally listed
@@ -80,13 +80,13 @@ class Zend_Service_Ebay_Finding_ListingInfo extends Zend_Service_Ebay_Finding_Ab
 
     /**
      * The listing's Buy It Now Price (if any), converted into the currency of
-     * the booking to which you sent your search request.
+     * the site to which you sent your search request.
      *
      * For active items, refresh this value every 24 hours to pick up changes in
      * conversion rates (if this value has been converted).
      *
      * Price fields are returned as doubles, not necessarily in the traditional
-     * monetary format of the booking's country. For example, a US Dollar value
+     * monetary format of the site's country. For example, a US Dollar value
      * might be returned as 3.880001 instead of 3.88.
      *
      * Only returned if an item was listed with Buy It Now.
